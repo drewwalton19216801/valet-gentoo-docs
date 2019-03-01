@@ -1,4 +1,4 @@
-<h1><img src="https://cdn.rawgit.com/wiki/cpriego/valet-linux/images/valet.svg"></h1>
+<h1>Valet Gentoo</h1>
 - [Introduction](#introduction)
     - [Valet Or Homestead](#valet-or-homestead)
 - [Installation](#installation)
@@ -19,13 +19,13 @@ Please **do not, under any circumstance, install valet with** root **or the** `s
 
 ## <a name="introduction">Introduction</a>
 
-Valet *Linux* is a Laravel development environment for Linux minimalists. No Vagrant, no `/etc/hosts` file. You can even share your sites publicly using local tunnels. _Yeah, we like it too._
+Valet *Gentoo* is a Laravel development environment for Gentoo Linux minimalists. No Vagrant, no `/etc/hosts` file. You can even share your sites publicly using local tunnels. _Yeah, we like it too._
 
-Valet *Linux* configures your system to always run Nginx in the background when your machine starts. Then, using [DnsMasq](https://en.wikipedia.org/wiki/Dnsmasq), Valet proxies all requests on the `*.test` domain to point to sites installed on your local machine.
+Valet *Gentoo* configures your system to always run Nginx in the background when your machine starts. Then, using [DnsMasq](https://en.wikipedia.org/wiki/Dnsmasq), Valet proxies all requests on the `*.test` domain to point to sites installed on your local machine.
 
 In other words, a blazing fast Laravel development environment that uses roughly 7mb of RAM. Valet *Linux* isn't a complete replacement for Vagrant or Homestead, but provides a great alternative if you want flexible basics, prefer extreme speed, or are working on a machine with a limited amount of RAM.
 
-Out of the box, Valet support includes, but is not limited to:
+Out of the box, Valet Gentoo support includes, but is not limited to:
 
 - [Laravel](https://laravel.com)
 - [Lumen](https://lumen.laravel.com)
@@ -52,14 +52,15 @@ Both Valet and Homestead are great choices for configuring your Laravel developm
 
 ## <a name="installation">Installation</a>
 
- - Install Valet with [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) via `composer global require cpriego/valet-linux`.
+ - Review Gentoo-specific [requirements](requirements) before installing Valet Gentoo.
+ - Install Valet with [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) via `composer global require drewwalton19216801/valet-gentoo`.
  - Run the `valet install` command. This will configure and install Valet and DnsMasq, and register Valet's daemon to launch when your system starts.
 
 Once Valet is installed, try pinging any `*.test` domain on your terminal using a command such as `ping foobar.test`. If Valet is installed correctly you should see this domain responding on `127.0.0.1`.
 
 Valet will automatically start its daemon each time your machine boots. There is no need to run `valet start` or `valet install` ever again once the initial Valet installation is complete.
 
-> Valet *Linux* is installed as a `composer` global package. You need to have composer installed in your system and ideally have the composer global tools added to your `PATH`.
+> Valet *Gentoo* is installed as a `composer` global package. You need to have composer installed in your system and ideally have the composer global tools added to your `PATH`.
 
 > Before installation, you should review your system specific [requirements](requirements) and make sure that no other programs such as Apache or Nginx are binding to your local machine's port 80.
 
